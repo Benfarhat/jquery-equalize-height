@@ -72,7 +72,6 @@
           $panels = this;
       $panels.<span style="color:#c0392b;">each</span>(<span style="color:#2980b9;">function</span>(i, <span style="color:#16a085;">el</span>){
         var elHeight = $(<span style="color:#16a085;">el</span>).outerHeight();
-        $(<span style="color:#16a085;">el</span>).find('h2').html('Real high is: ' + elHeight + 'px');
         if (elHeight > tallestHeight) {
           tallestHeight = elHeight;
         }
@@ -163,7 +162,7 @@
           $panels.each(function(i, el){
             var elHeight = $(el).outerHeight();
             
-            $(el).find('h2').html('Real high is: ' + elHeight + 'px');
+            $(el).find('h2').html('Real high is: ' + elHeight + 'px'); // You don't need this line, it's just for the demo.
             
             if (elHeight > tallestHeight) {
               tallestHeight = elHeight;
