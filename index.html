@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <title>🌍 jQuery Equalize Height</title>
+    <meta charset="utf-8"/>    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Equalize Height"> 
+    <meta name="description" content="Equalize heights of a set of elements."> 
+    <meta name="author" content="Benfarhat Elyes"> 
+    <meta name="geo.placename" content="Tunis, Tunisia"> 
+    <meta name="geo.region" content="TN-11">   
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+    <!-- Font Face -->
+    <link href="https://fonts.googleapis.com/css?family=Archivo+Narrow" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Cutive+Mono|Inconsolata" rel="stylesheet"> 
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+    body{font-family:"Archivo narrow", Serif;}
+    .panel-primary{color:#fff; border-radius:0; background-color:#2980b9;}
+    .panel-danger{color:#fff; border-radius:0; background-color:#c0392b;}
+    .panel-success{color:#fff; border-radius:0; background-color:#16a085;}
+    </style>
+</head>
+<body>
+  
+    <!-- ######## -->
+    <!-- MENU NAV -->
+    <!-- ######## -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Equalize Height</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="active"><a href="#"><i class="fa fa-github"></i> <span class="sr-only">(current)</span></a></li>
+          </ul>
+        </div><!--/.navbar-collapse -->
+      </div>
+    </nav>
+    <!-- ########### -->
+    <!-- PRIMARY MSG -->
+    <!-- ########### -->
+    
+    <div class="jumbotron">
+      <div class="container">
+        <h1>Equalize Height</h1>
+        <p>Equalize heights of a set of elements !</p>
+      </div>
+    </div>
+
+    <!-- ############## -->
+    <!-- Content Part 1 -->
+    <!-- ############## -->
+    
+    <div class="container">
+      <!-- Example row of columns -->
+      <div class="row panels part1">
+        <div class="col-md-4 panel panel-primary">
+          <h2>First panel</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec aliquet, ligula vel facilisis commodo, est dui auctor felis, vel ornare leo purus eu sapien. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris elementum sollicitudin enim a vehicula. Maecenas ullamcorper nibh quis tellus euismod, ut dictum orci feugiat. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Mauris non sapien pulvinar, malesuada sem ut, pharetra velit. Donec ut gravida augue. Fusce congue risus sed mauris lacinia, facilisis finibus arcu hendrerit. Cras pellentesque ipsum pulvinar, semper nisl nec, sodales nibh. Donec malesuada rutrum posuere. In mollis nisi et augue dignissim lobortis. Morbi ante enim, tempus non condimentum tempus, dapibus rutrum ligula. Pellentesque posuere id mauris vitae tempus. Praesent a finibus nulla. Nunc commodo est id eros bibendum, sed rutrum tortor accumsan.</p>
+        </div>
+        <div class="col-md-4 panel panel-danger">
+          <h2>Second panel</h2>
+          <p>Phasellus luctus lacus sed dui lobortis malesuada. Nullam porttitor justo ac viverra lobortis. Donec vitae lobortis sapien, quis molestie erat. Quisque lacinia augue et scelerisque tincidunt. Ut vestibulum elit sit amet odio sagittis luctus. In hac habitasse platea dictumst. Donec lobortis, elit in ultricies consequat, dolor urna imperdiet urna, non sagittis ipsum ante eu leo. Mauris interdum est libero, a scelerisque purus commodo at.</p>
+        </div>
+        <div class="col-md-4 panel panel-success">
+          <h2>Third panel</h2>
+          <p>Curabitur accumsan, quam vitae egestas gravida, ipsum sem euismod elit, eu commodo arcu neque tristique erat. Nam tempus luctus est ac venenatis. Suspendisse quis tincidunt lorem. Vivamus ut orci ornare, blandit est ut, pharetra ligula. Phasellus tempor rhoncus enim, sed vulputate tellus. Etiam nec purus vel enim fermentum molestie in ac dolor. Mauris dapibus mi libero, eu faucibus quam pharetra vel. Suspendisse dolor dui, pellentesque nec mattis at, tincidunt non dolor. Aliquam fermentum purus mi, eget pulvinar felis porttitor nec. Nulla fermentum blandit diam sed iaculis. Vivamus viverra quis justo luctus finibus. Vivamus ornare, quam quis maximus feugiat, est metus venenatis tortor, vitae iaculis lorem diam id turpis. Etiam a ultrices lorem, et volutpat urna.</p>
+        </div>
+      </div>
+
+    <!-- ############## -->
+    <!-- Content Part 2 -->
+    <!-- ############## -->
+    
+      <div class="row panels part2">
+        <div class="col-md-4 panel panel-primary">
+          <h2>First panel</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec aliquet, ligula vel facilisis commodo, est dui auctor felis, vel ornare leo purus eu sapien. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris elementum sollicitudin enim a vehicula. Maecenas ullamcorper nibh quis tellus euismod, ut dictum orci feugiat. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Mauris non sapien pulvinar, malesuada sem ut, pharetra velit. Donec ut gravida augue. Fusce congue risus sed mauris lacinia, facilisis finibus arcu hendrerit. Cras pellentesque ipsum pulvinar, semper nisl nec, sodales nibh. Donec malesuada rutrum posuere. In mollis nisi et augue dignissim lobortis. Morbi ante enim, tempus non condimentum tempus, dapibus rutrum ligula. Pellentesque posuere id mauris vitae tempus. Praesent a finibus nulla. Nunc commodo est id eros bibendum, sed rutrum tortor accumsan.Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris elementum sollicitudin enim a vehicula. Maecenas ullamcorper nibh quis tellus euismod, ut dictum orci feugiat. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Mauris non sapien pulvinar, malesuada sem ut, pharetra velit. Donec ut gravida augue. Fusce congue risus sed mauris lacinia, facilisis finibus arcu hendrerit. Cras pellentesque ipsum pulvinar, semper nisl nec, sodales nibh. Donec malesuada rutrum posuere. In mollis nisi et augue dignissim lobortis. Morbi ante enim, tempus non condimentum tempus, dapibus rutrum ligula. Pellentesque posuere id mauris vitae tempus. Praesent a finibus nulla. Nunc commodo est id eros bibendum, sed rutrum tortor accumsan.</p>
+        </div>
+        <div class="col-md-4 panel panel-danger">
+          <h2>Second panel</h2>
+          <p>Phasellus luctus lacus sed dui lobortis malesuada. Nullam porttitor justo ac viverra lobortis. Donec vitae lobortis sapien, quis molestie erat. Quisque lacinia augue et scelerisque tincidunt. Ut vestibulum elit sit amet odio sagittis luctus. In hac habitasse platea dictumst. Donec lobortis, elit in ultricies consequat, dolor urna imperdiet urna, non sagittis ipsum ante eu leo. Mauris interdum est libero, a scelerisque purus commodo at.</p>
+        </div>
+        <div class="col-md-4 panel panel-success">
+          <h2>Third panel</h2>
+          <p>Curabitur accumsan, quam vitae egestas gravida, ipsum sem euismod elit, eu commodo arcu neque tristique erat. Nam tempus luctus est ac venenatis. Suspendisse quis tincidunt lorem. Vivamus ut orci ornare, blandit est ut, pharetra ligula. Phasellus tempor rhoncus enim, sed vulputate tellus. Etiam nec purus vel enim fermentum molestie in ac dolor. Mauris dapibus mi libero, eu faucibus quam pharetra vel. Suspendisse dolor dui, pellentesque nec mattis at, tincidunt non dolor. Aliquam fermentum purus mi, eget pulvinar felis porttitor nec. Nulla fermentum blandit diam sed iaculis. Vivamus viverra quis justo luctus finibus. Vivamus ornare, quam quis maximus feugiat, est metus venenatis tortor, vitae iaculis lorem diam id turpis. Etiam a ultrices lorem, et volutpat urna.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ###### -->
+    <!-- FOOTER -->
+    <!-- ###### -->
+    
+    <div class="container">
+    <hr>
+      <footer style="text-align:center;">
+        <p>Please <span class="text-danger">❤❤❤</span> No matter how small your contribution is, never stop sharing your knowledge with the world!</p>
+        <!-- License -->
+        <p>Except where otherwise noted, this work is licensed under a <a rel="nofollow" class="external text" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</p>
+      </footer>
+    </div> <!-- /container -->
+    
+    
+    
+
+  <!-- All Jquery -->
+  <!-- ============================================================== -->
+  <!-- jQuery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="src/js/jquery/1.12.4/jquery.min.js"><\/script>');</script>
+  <!-- Bootstrap Core JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <!-- Plugin -->     
+  <script type="text/javascript">
+    (function( $ ){
+        'use strict';
+        
+        $.fn.equalizeHeight = function () {
+        
+          var tallestHeight = 0,
+              $panels = this;
+          
+          
+          $panels.each(function(i, el){
+            var elHeight = $(el).outerHeight();
+            
+            $(el).find('h2').html('Real high is: ' + elHeight + 'px');
+            
+            if (elHeight > tallestHeight) {
+              tallestHeight = elHeight;
+            }
+          });
+          
+          $panels.css('min-height', tallestHeight);        
+          return this;
+        };
+        
+    }( jQuery ));
+    
+    
+    $(document).ready(function () {
+      'use strict';
+      $('.part1').find('.panel').equalizeHeight();
+      $('.part2').find('.panel').equalizeHeight();
+
+    });
+  </script>  
+</body>
+</html>
