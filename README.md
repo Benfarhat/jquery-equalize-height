@@ -17,8 +17,6 @@ Use this code if you need to equalize height for a set of elements
         $panels.each(function(i, el){
           var elHeight = $(el).outerHeight();
           
-          $(el).find('h2').html('Real high is: ' + elHeight + 'px');
-          
           if (elHeight > tallestHeight) {
             tallestHeight = elHeight;
           }
