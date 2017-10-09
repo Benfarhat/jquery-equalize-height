@@ -27,6 +27,7 @@
     .panel-primary{color:#fff; border-radius:0; background-color:#2980b9;}
     .panel-danger{color:#fff; border-radius:0; background-color:#c0392b;}
     .panel-success{color:#fff; border-radius:0; background-color:#16a085;}
+    .code{font-size:0.8em;margin-top:24px;border-radius:0;border-left:42px solid #bbb;}
     </style>
 </head>
 <body>
@@ -58,8 +59,29 @@
     
     <div class="jumbotron">
       <div class="container">
-        <h1>Equalize Height</h1>
-        <p>Equalize heights of a set of elements !</p>
+        <div class="col-md-4">
+          <h2>Equalize Height</h2>
+          <p>Equalize heights of a set of elements !</p>
+        </div>
+        <div class="col-md-8">
+          <pre class="code">
+(<span style="color:#2980b9;">function</span>( $ ){
+    'use strict';
+    $.fn.<span style="color:#c0392b;">equalizeHeight</span> = <span style="color:#2980b9;">function</span> () {
+      var tallestHeight = 0,
+          $panels = this;
+      $panels.<span style="color:#c0392b;">each</span>(<span style="color:#2980b9;">function</span>(i, <span style="color:#16a085;">el</span>){
+        var elHeight = $(<span style="color:#16a085;">el</span>).outerHeight();
+        $(<span style="color:#16a085;">el</span>).find('h2').html('Real high is: ' + elHeight + 'px');
+        if (elHeight > tallestHeight) {
+          tallestHeight = elHeight;
+        }
+      });
+      $panels.css('min-height', tallestHeight);        
+      <span style="color:#c0392b;">return this;</span>
+    };
+}( jQuery ));</pre>
+        </div>
       </div>
     </div>
 
@@ -91,7 +113,7 @@
       <div class="row panels part2">
         <div class="col-md-4 panel panel-primary">
           <h2>First panel</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec aliquet, ligula vel facilisis commodo, est dui auctor felis, vel ornare leo purus eu sapien. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris elementum sollicitudin enim a vehicula. Maecenas ullamcorper nibh quis tellus euismod, ut dictum orci feugiat. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Mauris non sapien pulvinar, malesuada sem ut, pharetra velit. Donec ut gravida augue. Fusce congue risus sed mauris lacinia, facilisis finibus arcu hendrerit. Cras pellentesque ipsum pulvinar, semper nisl nec, sodales nibh. Donec malesuada rutrum posuere. In mollis nisi et augue dignissim lobortis. Morbi ante enim, tempus non condimentum tempus, dapibus rutrum ligula. Pellentesque posuere id mauris vitae tempus. Praesent a finibus nulla. Nunc commodo est id eros bibendum, sed rutrum tortor accumsan.Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris elementum sollicitudin enim a vehicula. Maecenas ullamcorper nibh quis tellus euismod, ut dictum orci feugiat. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Mauris non sapien pulvinar, malesuada sem ut, pharetra velit. Donec ut gravida augue. Fusce congue risus sed mauris lacinia, facilisis finibus arcu hendrerit. Cras pellentesque ipsum pulvinar, semper nisl nec, sodales nibh. Donec malesuada rutrum posuere. In mollis nisi et augue dignissim lobortis. Morbi ante enim, tempus non condimentum tempus, dapibus rutrum ligula. Pellentesque posuere id mauris vitae tempus. Praesent a finibus nulla. Nunc commodo est id eros bibendum, sed rutrum tortor accumsan.</p>
+          <p>Curabitur accumsan, quam vitae egestas gravida, ipsum sem euismod elit, eu commodo arcu neque tristique erat. Nam tempus luctus est ac venenatis. Suspendisse quis tincidunt lorem. Vivamus ut orci ornare, blandit est ut, pharetra ligula. Phasellus tempor rhoncus enim, sed vulputate tellus. Etiam nec purus vel enim fermentum molestie in ac dolor. Mauris dapibus mi libero, eu faucibus quam pharetra vel. Suspendisse dolor dui, pellentesque nec mattis at, tincidunt non dolor. Aliquam fermentum purus mi, eget pulvinar felis porttitor nec. Nulla fermentum blandit diam sed iaculis. Vivamus viverra quis justo luctus finibus. Vivamus ornare, quam quis maximus feugiat, est metus venenatis tortor, vitae iaculis lorem diam id turpis. Etiam a ultrices lorem, et volutpat urna.</p>
         </div>
         <div class="col-md-4 panel panel-danger">
           <h2>Second panel</h2>
@@ -99,7 +121,7 @@
         </div>
         <div class="col-md-4 panel panel-success">
           <h2>Third panel</h2>
-          <p>Curabitur accumsan, quam vitae egestas gravida, ipsum sem euismod elit, eu commodo arcu neque tristique erat. Nam tempus luctus est ac venenatis. Suspendisse quis tincidunt lorem. Vivamus ut orci ornare, blandit est ut, pharetra ligula. Phasellus tempor rhoncus enim, sed vulputate tellus. Etiam nec purus vel enim fermentum molestie in ac dolor. Mauris dapibus mi libero, eu faucibus quam pharetra vel. Suspendisse dolor dui, pellentesque nec mattis at, tincidunt non dolor. Aliquam fermentum purus mi, eget pulvinar felis porttitor nec. Nulla fermentum blandit diam sed iaculis. Vivamus viverra quis justo luctus finibus. Vivamus ornare, quam quis maximus feugiat, est metus venenatis tortor, vitae iaculis lorem diam id turpis. Etiam a ultrices lorem, et volutpat urna.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec aliquet, ligula vel facilisis commodo, est dui auctor felis, vel ornare leo purus eu sapien. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris elementum sollicitudin enim a vehicula. Maecenas ullamcorper nibh quis tellus euismod, ut dictum orci feugiat. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Mauris non sapien pulvinar, malesuada sem ut, pharetra velit. Donec ut gravida augue. Fusce congue risus sed mauris lacinia, facilisis finibus arcu hendrerit. Cras pellentesque ipsum pulvinar, semper nisl nec, sodales nibh. Donec malesuada rutrum posuere. In mollis nisi et augue dignissim lobortis. Morbi ante enim, tempus non condimentum tempus, dapibus rutrum ligula. Pellentesque posuere id mauris vitae tempus. Praesent a finibus nulla. Nunc commodo est id eros bibendum, sed rutrum tortor accumsan.Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris elementum sollicitudin enim a vehicula. Maecenas ullamcorper nibh quis tellus euismod, ut dictum orci feugiat. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Mauris non sapien pulvinar, malesuada sem ut, pharetra velit. Donec ut gravida augue. Fusce congue risus sed mauris lacinia, facilisis finibus arcu hendrerit. Cras pellentesque ipsum pulvinar, semper nisl nec, sodales nibh. Donec malesuada rutrum posuere. In mollis nisi et augue dignissim lobortis. Morbi ante enim, tempus non condimentum tempus, dapibus rutrum ligula. Pellentesque posuere id mauris vitae tempus. Praesent a finibus nulla. Nunc commodo est id eros bibendum, sed rutrum tortor accumsan.</p>
         </div>
       </div>
     </div>
